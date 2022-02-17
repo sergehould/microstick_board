@@ -15,6 +15,12 @@ extern "C" {
 
  /* Add common macros here*/
 #define  DEBUG
+#if defined DEBUG
+    #define MAX   56448
+#else
+    #define MAX   393693
+#endif
+
 #ifdef	__cplusplus
 }
 #endif
