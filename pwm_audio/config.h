@@ -14,7 +14,7 @@ extern "C" {
 #endif
 
  /* Add common macros here*/
-
+#define  DEBUG
 #ifdef	__cplusplus
 }
 #endif
