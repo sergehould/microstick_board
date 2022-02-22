@@ -1501,3 +1501,10 @@ void set_stdio(int _stdio){
     }// switch case 
 }
  
+void printUart2FromISR(char *str){
+    while(*str != '\0'){
+        while(U2STAbits.TRMT == 0);
+        U2TXREG = *str; 
+        str++;
+    }
+}
