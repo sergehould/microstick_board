@@ -31,10 +31,9 @@ void timer2_init( void){
     PR2 = 0xfff;
     __builtin_disable_interrupts();   // disable interrupts
     IPC2bits.T2IP = 0x01; // Set Timer 2 Interrupt Priority Level
-    IFS0bits.T2IF = 0; // Clear Timer 2 Interrupt Flag
     INTCONbits.MVEC=1;
     IEC0bits.T2IE = 1; // Enable Timer 2 interrupt
-   // _T2IP = 6; // Enable Timer 2 interrupt
     __builtin_enable_interrupts();   // enable interrupts
-    T2CONbits.TON = 1; // Start Timer              
+    T2CONbits.TON = 1; // Start Timer 
+    IFS0bits.T2IF = 0; // Clear Timer 2 Interrupt Flag
 } // init
