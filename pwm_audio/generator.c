@@ -35,5 +35,5 @@ void timer2_init( void){
     IEC0bits.T2IE = 1; // Enable Timer 2 interrupt
     __builtin_enable_interrupts();   // enable interrupts
     T2CONbits.TON = 1; // Start Timer 
-    IFS0bits.T2IF = 1; // Clear Timer 2 Interrupt Flag
+    IFS0bits.T2IF = 1; // Sets Timer 2 Interrupt Flag so the ISR is called right away
 } // init
