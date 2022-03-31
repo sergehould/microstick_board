@@ -8,7 +8,6 @@
 #ifndef PUBLIC_H
 #define	PUBLIC_H
 
-#define DEBUG
 #ifdef	__cplusplus
 extern "C" {
 #endif
