@@ -10,7 +10,7 @@
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Serge Hould      29 Sept. 2021	v1.0
  * Serge Hould      13 Dec 2021     v1.1 Adapt for MICROSTICK II
- *		    11 April 2022	increases skip counter
+ * Serge Hould      11 April 2022   v1.2 Modify heartbeat macros
  * 
  * TO DO: fine tune delay for MICROSTICK II 
  * 		
@@ -28,24 +28,32 @@
  * Author        	Date            Version     Comments on this revision
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Serge Hould      15 Sept. 2021   1.0         First version 
+ * Serge Hould      11 April 2022   1.1         Sets different values depending
+ *                                              on the board.
  * 
  * 		
  *******************************************************************************/
-#define     SKIP        200000    // Sets the heartbeat frequency
 
-//#define     DUTY        50     // 0.1 % duty cycle
-//#define     DUTY      500     // 1 % duty cycle
-#define     DUTY      50000     // 10 % duty cycle
-//#define     DUTY       50000   // 100% duty cycle
+
 
 #if defined  MX3
+	#define     SKIP        20000    // Sets the heartbeat frequency
+
+	//#define     DUTY        20     // 0.1 % duty cycle
+	#define     DUTY      200     // 1 % duty cycle
+	//#define     DUTY      2000     // 10 % duty cycle
+	//#define     DUTY       20000   // 100% duty cycle
     //#define     HEARTBEAT    LATDbits.LATD12  //Green LED
     #define     HEARTBEAT    LATDbits.LATD3  // Blue LED
     //#define     HEARTBEAT    LATDbits.LATD2  // Red LED
 #elif   defined EXPLORER_16_32
+	#define     SKIP        20000    // Sets the heartbeat frequency
+	#define     DUTY      	10000     // 50 % duty cycle
     #define     HEARTBEAT    LATAbits.LATA7  // D10 LED
 
 #elif defined MICROSTICK_II
+	#define     SKIP        20000    // Sets the heartbeat frequency
+	#define     DUTY      	10000     // 50 % duty cycle
     #define     HEARTBEAT      LATAbits.LATA0
 #endif
 
