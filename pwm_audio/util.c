@@ -10,6 +10,7 @@
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Serge Hould      29 Sept. 2021	v1.0
  * Serge Hould      13 Dec 2021     v1.1 Adapt for MICROSTICK II
+ *		    11 April 2022	increases skip counter
  * 
  * TO DO: fine tune delay for MICROSTICK II 
  * 		
@@ -30,11 +31,11 @@
  * 
  * 		
  *******************************************************************************/
-#define     SKIP        20000    // Sets the heartbeat frequency
+#define     SKIP        200000    // Sets the heartbeat frequency
 
 //#define     DUTY        50     // 0.1 % duty cycle
-#define     DUTY      500     // 1 % duty cycle
-//#define     DUTY      5000     // 10 % duty cycle
+//#define     DUTY      500     // 1 % duty cycle
+#define     DUTY      50000     // 10 % duty cycle
 //#define     DUTY       50000   // 100% duty cycle
 
 #if defined  MX3
