@@ -20,7 +20,7 @@
 extern int sec;
 
 int main(void) {
-    
+    Uart2_init();
     heartbeat_init();
     set_stdio(C_UART2);
     printf("Starting\n");
