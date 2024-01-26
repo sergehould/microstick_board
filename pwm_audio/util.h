@@ -22,6 +22,9 @@ void tone_low(int cnt);
 void init_tone(void);
 void delay_ms( unsigned int);
 void delay_10us( unsigned int);
+long map(long x, long in_min, long in_max, long out_min, long out_max);
+float mapf(float x, float in_min, float in_max, float out_min, float out_max);
+
 
 #ifdef	__cplusplus
 }
