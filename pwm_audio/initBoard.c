@@ -37,7 +37,7 @@
 //(8MHz Crystal/ FPLLIDIV * FPLLMUL / FPLLODIV)
 // PBCLK = 40 MHz
 // Primary Osc w/PLL (HS+PLL)
-// WDT OFF, Peripheral Bus is CPU clock÷8
+// WDT OFF, Peripheral Bus is CPU clockÃ·8
 // Other options are default as per datasheet
 // see file:C:\Program Files (x86)\Microchip\xc32\v1.40\docs\config_docs\32mx795f512l.html
 #pragma config FPLLMUL = MUL_20
@@ -89,7 +89,7 @@
 void ios_init(void){
     DDPCONbits.JTAGEN = 0; // JTAG shared with RA5, RA4, RA1 and RA0
     /* LEDs */
-    TRISAbits.TRISA7 = 0; 		//LED D10 
+    //TRISAbits.TRISA7 = 0; 		//LED D10 
 	TRISAbits.TRISA6 = 0;   	//LED D9
     TRISAbits.TRISA5 = 0;   	//LED D8
     TRISAbits.TRISA4 = 0;       //LED D7
@@ -101,8 +101,9 @@ void ios_init(void){
    
     TRISDbits.TRISD6 =1; //S3
     TRISDbits.TRISD7 =1;//S6
+    TRISAbits.TRISA7 =1; //S5 - shared with LED D10
     TRISDbits.TRISD13 =1;//S4
-    //TRISAbits.TRISA7 =1; //S5 - shared with LED D10
+
 	
     /* Turns off all LEDs*/
      LATA = LATA & 0xffff0000;
