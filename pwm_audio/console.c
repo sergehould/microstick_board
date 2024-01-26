@@ -1492,7 +1492,7 @@ U2BRG = (PBCLK  / 16 / baudrate) -1 ; for BREGH=0
 //baud 115200
 #define BRATE   21        // (40000000/16/115200)-1
  	
-void Uart2_init( int baudrate)
+void uart2_init( int baudrate)
 {
    //U2BRG    = BRATE;  
    U2BRG = (40000000  / 16 / baudrate) -1 ; //for BREGH=0
@@ -1642,10 +1642,10 @@ void _mon_putc (char c)
             while(U2STAbits.TRMT == 0);
             U2TXREG = c;        
             break;
-        case C_UART3:
-            while(U3STAbits.TRMT == 0);
-            U3TXREG = c;        
-            break;            
+//        case C_UART3:
+//            while(U3STAbits.TRMT == 0);
+//            U3TXREG = c;        
+//            break;            
         /* Uart4 */
 #ifndef MICROSTICK_II
         case C_UART4:
