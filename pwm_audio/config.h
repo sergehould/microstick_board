@@ -5,8 +5,8 @@
  * Created on December 14, 2021, 11:54 AM
  */
 
-#ifndef PUBLIC_H
-#define	PUBLIC_H
+#ifndef CONFIG_H
+#define	CONFIG_H
 
 #ifdef	__cplusplus
 extern "C" {
