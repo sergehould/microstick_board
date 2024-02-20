@@ -22,8 +22,8 @@
  * SH				30 May 2022			Add LCD_SETTLE_TIME macro
  * SH               6 June 2023         Add uart3_init() and UART3 macro
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#ifndef __CONSOLE2_H_
-#define __CONSOLE2_H_
+#ifndef __CONSOLE_H_
+#define __CONSOLE_H_
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
