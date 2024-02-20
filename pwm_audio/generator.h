@@ -5,8 +5,8 @@
  * Created on December 16, 2021, 5:08 PM
  */
 
-#ifndef PIANO_H
-#define	PIANO_H
+#ifndef GENERATOR_H
+#define	GENERATOR_H
 
 #ifdef	__cplusplus
 extern "C" {
